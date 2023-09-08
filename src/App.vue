@@ -1,5 +1,5 @@
 <template>
-	<div class="min-h-screen bg-primary-50 dark:bg-primary-800">
+	<div class="min-h-screen bg-primary-100 dark:bg-primary-800">
 		<header class="shadow relative py-6 bg-white dark:bg-primary-700">
 			<Container class="flex justify-between items-center gap-4">
 				<RouterLink to="/">
