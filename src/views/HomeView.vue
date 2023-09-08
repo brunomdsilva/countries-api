@@ -1,17 +1,15 @@
 <template>
-	<div>
-		<Container class="flex flex-col gap-12">
-			<div class="flex flex-col sm:flex-row justify-between gap-4">
-				<SearchInput v-model="search" />
+	<Container class="flex flex-col gap-12">
+		<div class="flex flex-col sm:flex-row justify-between gap-4">
+			<SearchInput v-model="search" />
 
-				<FilterSelect :options="countryRegions" @select-region="selectedCountryRegion = $event" />
-			</div>
+			<FilterSelect :options="countryRegions" @select-region="selectedCountryRegion = $event" />
+		</div>
 
-			<p v-if="!filteredCountries.length" class="font-semibold text-lg">No countries were found...</p>
+		<p v-if="!filteredCountries.length" class="font-semibold text-lg">No countries were found...</p>
 
-			<CountriesList v-else :countries="filteredCountries" />
-		</Container>
-	</div>
+		<CountriesList v-else :countries="filteredCountries" />
+	</Container>
 </template>
 
 <script setup>
@@ -19,7 +17,7 @@ import { computed, ref } from "vue";
 import Container from "@/components/Container.vue";
 import SearchInput from "@/components/SearchInput.vue";
 import FilterSelect from "@/components/FilterSelect.vue";
-import CountriesList from "./Partials/CountriesList.vue";
+import CountriesList from "@/components/CountriesList.vue";
 import countriesData from "@/data.json";
 
 const countries = ref(
