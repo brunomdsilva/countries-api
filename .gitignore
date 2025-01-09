@@ -28,3 +28,4 @@ coverage
 *.sw?
 
 /frontendmentor
+.DS_Store
